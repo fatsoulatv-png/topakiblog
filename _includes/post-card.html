@@ -1,0 +1,32 @@
+{% comment %}
+  Renders a single blog post card.
+  Expects: include.post (a Jekyll post object).
+{% endcomment %}
+{% assign p = include.post %}
+{% assign cat = site.data.categories | where: "slug", p.category | first %}
+
+<article class="post-card">
+  <a href="{{ p.url | relative_url }}" class="post-card__media" aria-label="{{ p.title }}">
+    {% if p.image %}
+      <img src="{{ p.image | relative_url }}" alt="{{ p.image_alt | default: p.title }}" loading="lazy" />
+    {% else %}
+      <div class="post-card__media post-card__media--placeholder" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"></path>
+        </svg>
+      </div>
+    {% endif %}
+    {% if cat %}<span class="post-card__category">{{ cat.name }}</span>{% endif %}
+  </a>
+
+  <div class="post-card__body">
+    <div class="post-card__date">{{ p.date | date: "%-d %B %Y" }}</div>
+    <h2 class="post-card__title">
+      <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+    </h2>
+    <p class="post-card__excerpt">
+      {% if p.excerpt_text %}{{ p.excerpt_text }}{% else %}{{ p.excerpt | strip_html | truncate: 150 }}{% endif %}
+    </p>
+    <a href="{{ p.url | relative_url }}" class="post-card__readmore">Διαβάστε περισσότερα →</a>
+  </div>
+</article>

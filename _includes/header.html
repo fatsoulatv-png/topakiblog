@@ -1,0 +1,22 @@
+<div class="promo-bar">
+  ΔΩΡΕΑΝ ΑΠΟΣΤΟΛΗ ΓΙΑ ΑΓΟΡΕΣ ΑΝΩ ΤΩΝ 49€ &nbsp;·&nbsp; <a href="https://topaki.gr">Αγοράστε στο topaki.gr →</a>
+</div>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="Topaki Blog – αρχική">
+      <img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Topaki" />
+      <span class="sr-only">Topaki Blog</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Κύρια πλοήγηση">
+      <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="is-active"{% endif %}>Blog</a>
+      <a href="https://topaki.gr/product-category/pitzames/">Πιτζάμες</a>
+      <a href="https://topaki.gr/product-category/esoroucha/">Εσώρουχα</a>
+      <a href="https://topaki.gr/product-category/andrika/">Ανδρικά</a>
+      <a href="https://topaki.gr/product-category/mama-kai-paidi/">Μαμά &amp; Παιδί</a>
+      <a href="https://topaki.gr/product-category/prosfores/">Προσφορές</a>
+      <a href="https://topaki.gr" class="shop-cta">Κατάστημα</a>
+    </nav>
+  </div>
+</header>

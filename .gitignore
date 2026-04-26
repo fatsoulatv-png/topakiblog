@@ -1,0 +1,21 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+Gemfile.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Local research / page-save artifacts (don't commit these)
+_research/
+view-source_*.html
+*saved_resource*
+"Γυναικείες Πιτζάμες"*

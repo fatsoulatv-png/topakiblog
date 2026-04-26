@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Blog"
+description: "Συμβουλές, τάσεις και οδηγοί για πιτζάμες, νυχτικά και homewear από την Topaki."
+permalink: /
+---
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="https://topaki.gr">topaki.gr</a> &nbsp;/&nbsp; Blog
+    </div>
+    <h1>Topaki Blog</h1>
+    <p>Συμβουλές, τάσεις και οδηγοί για πιτζάμες, νυχτικά και homewear — από την ομάδα της Topaki.</p>
+
+    <div class="category-pills">
+      <a href="{{ '/' | relative_url }}" class="is-active">Όλα</a>
+      {% for c in site.data.categories %}
+        <a href="{{ '/categories/' | append: c.slug | append: '/' | relative_url }}">{{ c.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="blog-list">
+  <div class="container">
+    <div class="post-grid">
+      {% for p in site.posts %}
+        {% include post-card.html post=p %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

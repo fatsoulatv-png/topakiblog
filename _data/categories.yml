@@ -1,0 +1,52 @@
+# Blog categories. Each post's frontmatter `category:` field should match a `slug` here.
+# The `shop_url` is the link back to the matching product category on topaki.gr.
+
+- slug: frontida
+  name: "Φροντίδα"
+  description: "Πώς να καθαρίζετε και να συντηρείτε τις πιτζάμες σας."
+  shop_url: "https://topaki.gr/product-category/pitzames/"
+
+- slug: kalokairines
+  name: "Καλοκαιρινές"
+  description: "Δροσερές πιτζάμες, νυχτικά και σετ για τους ζεστούς μήνες."
+  shop_url: "https://topaki.gr/product-category/pitzames/kalokairines/"
+
+- slug: cheimerines
+  name: "Χειμερινές"
+  description: "Ζεστές, fleece και βαμβακερές προτάσεις για το χειμώνα."
+  shop_url: "https://topaki.gr/product-category/pitzames/"
+
+- slug: saten
+  name: "Σατέν"
+  description: "Πολυτελή σατέν σχέδια — τάσεις και φροντίδα."
+  shop_url: "https://topaki.gr/product-category/pitzames/saten-pitzames/"
+
+- slug: vamvakeres
+  name: "Βαμβακερές"
+  description: "Φυσικό βαμβάκι, άνεση και αναπνοή."
+  shop_url: "https://topaki.gr/product-category/pitzames/vamvakeres-pitzames/"
+
+- slug: tasis
+  name: "Τάσεις μόδας"
+  description: "Σχέδια, χρώματα και prints της σεζόν."
+  shop_url: "https://topaki.gr/product-category/pitzames/"
+
+- slug: nyfikes
+  name: "Νυφικές"
+  description: "Νυφικά σετ — η πιο όμορφη πρώτη νύχτα."
+  shop_url: "https://topaki.gr/product-category/pitzames/nyfika-set/"
+
+- slug: egkymosini
+  name: "Εγκυμοσύνη"
+  description: "Πιτζάμες για εγκυμοσύνη, θηλασμό & μαιευτήριο."
+  shop_url: "https://topaki.gr/product-category/mama-kai-paidi/egkymosyni/"
+
+- slug: nychtika
+  name: "Νυχτικά"
+  description: "Από κλασικά νυχτικά μέχρι sexy babydoll."
+  shop_url: "https://topaki.gr/product-category/pitzames/nychtika/"
+
+- slug: set
+  name: "Σετ"
+  description: "Σετ πιτζάμας με ρόμπα — άνεση & κομψότητα."
+  shop_url: "https://topaki.gr/product-category/pitzames/set-gynaikeies-pitzames/"

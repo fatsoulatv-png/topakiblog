@@ -1,0 +1,38 @@
+title: "Topaki Blog"
+tagline: "Πιτζάμες, Νυχτικά & Σετ — Συμβουλές, Τάσεις & Φροντίδα"
+description: "Το blog του Topaki.gr. Συμβουλές για πιτζάμες, νυχτικά και homewear. Φροντίδα, τάσεις, εποχιακές προτάσεις και οδηγίες αγοράς."
+url: "https://blog.topaki.gr"
+shop_url: "https://topaki.gr"
+author: "Topaki"
+locale: "el"
+lang: "el"
+
+# Permalinks
+permalink: /posts/:slug/
+
+# Markdown / build
+markdown: kramdown
+highlighter: rouge
+timezone: Europe/Athens
+
+# GitHub Pages safe plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Build excludes
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore
+
+# Collections / defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

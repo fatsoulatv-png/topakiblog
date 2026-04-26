@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% assign cat = site.data.categories | where: "slug", page.cat_slug | first %}
+{% assign filtered = site.posts | where: "category", page.cat_slug %}
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="{{ '/' | relative_url }}">Blog</a> &nbsp;/&nbsp; {{ cat.name }}
+    </div>
+    <h1>{{ cat.name }}</h1>
+    {% if cat.description %}<p>{{ cat.description }}</p>{% endif %}
+
+    <div class="category-pills">
+      <a href="{{ '/' | relative_url }}">Όλα</a>
+      {% for c in site.data.categories %}
+        <a href="{{ '/categories/' | append: c.slug | append: '/' | relative_url }}"
+           {% if c.slug == cat.slug %}class="is-active"{% endif %}>{{ c.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="blog-list">
+  <div class="container">
+    {% if filtered.size > 0 %}
+      <div class="post-grid">
+        {% for p in filtered %}
+          {% include post-card.html post=p %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p style="text-align:center;color:var(--color-text-muted);padding:40px 0;">
+        Δεν υπάρχουν ακόμη άρθρα σε αυτή την κατηγορία.
+      </p>
+    {% endif %}
+  </div>
+</section>
